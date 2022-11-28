@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, TextInput, View, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const HomeScreen = () => {
@@ -39,6 +39,15 @@ const HomeScreen = () => {
             </View>
             <View style={{ flexDirection: 'row', marginTop: 10 }}>
                 <View style={styles.upContainer}>
+                    <Image style={{
+                        height: 70, width: 70,
+                        borderBottomLeftRadius: 40,
+                        borderBottomRightRadius: 40,
+                        borderTopLeftRadius: 40,
+                        borderTopRightRadius: 40,
+                        marginTop: 10
+                    }}
+                        source={require('../assets/about.jpg')} resizeMode='contain' />
                     <Text>Doctor</Text>
                 </View>
             </View>
@@ -47,13 +56,28 @@ const HomeScreen = () => {
                     <Text style={{ color: '#0080ff', fontSize: 20, fontWeight: 'bold' }}>Online Consultant</Text>
                 </View>
             </View>
-            <View style={{ flexDirection: 'row', marginTop: 10, justifyContent: 'space-between' }}>
+            <View style={{ flexDirection: 'row', marginTop: 10 }}>
                 <View style={styles.card}>
-                    <Text>Consultant</Text>
+                    <Image style={{ height: 80, width: 80 }}
+                        source={require('../assets/about.jpg')} resizeMode='contain' />
+                    <Text>Dr. Jackson</Text>
                 </View>
+                {/* <View style={styles.card}>
+                    <Text>Consultant</Text>
+                </View> */}
+            </View>
+            <View style={{ marginTop: 20 }}>
+                <View>
+                    <Text style={{ color: '#0080ff', fontSize: 20, fontWeight: 'bold' }}>Popular Doctors</Text>
+                </View>
+            </View>
+            <View style={{ flexDirection: 'row', marginTop: 10 }}>
                 <View style={styles.card}>
-                    <Text>Consultant</Text>
+                    <Image style={{ height: 80, width: 80 }}
+                        source={require('../assets/about.jpg')} resizeMode='contain' />
+                    <Text>Dr. Jackson</Text>
                 </View>
+
             </View>
 
         </SafeAreaView>
@@ -127,6 +151,5 @@ const styles = StyleSheet.create({
         height: 80,
         backgroundColor: '#fff',
         flexDirection: 'row',
-        justifyContent: 'space-between',
     }
 });
